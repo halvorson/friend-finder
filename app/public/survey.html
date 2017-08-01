@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FriendFinder</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<style>
+		.radio-options {
+			float: right;
+		}
+		/*.form-group {
+    		border-top: thick dotted #ff0000;
+    	}*/
+    </style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="jumbotron">
+			<h1 class="text-center">The Quiz!</h1>
+			<hr>
+			<h2 class="text-center">Fill this in and submit it for instant results</h2>
+			<!-- Trigger the modal with a button -->
+			<div class='text-center'>
+				<button type="button" id="matchModalButton" class="btn btn-info btn-lg hidden" data-toggle="modal" data-target="#matchModal">View Last Match</button>
+			</div>
+
+
+
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">Quiz form</h4>
+					</div>
+					<div class="panel-body">
+
+						<form role="form">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" class="form-control" id="name" placeholder="John Smith">
+							</div>
+							<div class="form-group">
+								<label for="photoLink">Link to Photo</label>
+								<input type="text" class="form-control" id="photoLink" placeholder="https://facebook.com/">
+							</div>
+							<hr>
+							<h4 class="text-center">How much do you agree with each of the following statements?</h4>
+							<br>
+							<div class="form-group">
+								<label>Jurassic Park is horribly inaccurate: dinosaurs actually had feathers</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q1" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q1" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q1" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q1" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q1" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Beer tastes good, but beer snobs are silly</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q2" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q2" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q2" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q2" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q2" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>The moon is larger than the sun</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q3" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q3" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q3" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q3" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q3" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Astrology is a legitimate science</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q4" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q4" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q4" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q4" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q4" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>If I had the power, I would kill all mosquitoes in the world without a second thought</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q5" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q5" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q5" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q5" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q5" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Dreams have hidden meanings and we can learn a lot from them</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q6" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q6" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q6" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q6" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q6" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>I would survive the zombie apocalypse</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q7" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q7" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q7" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q7" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q7" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Entropy is my biggest fear</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q8" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q8" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q8" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q8" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q8" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>If I could relive life from the beginning of high school, I wouldn't</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q9" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q9" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q9" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q9" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q9" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>I would rather own a submarine than an airplane</label>
+								<div class="radio-options">
+									<label class="radio-inline">
+										<input type="radio" name="q10" id="inlineRadio1" value="1"> Strongly Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q10" id="inlineRadio2" value="2"> Disagree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q10" id="inlineRadio3" value="3"> Neutral
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q10" id="inlineRadio3" value="4"> Agree
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="q10" id="inlineRadio3" value="5"> Strongly Agree
+									</label>
+								</div>
+							</div>
+
+
+
+
+							<button type="submit" class="btn btn-primary submit">Submit</button>
+						</form>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="matchModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Your new best friend!</h4>
+				</div>
+				<div class="modal-body">
+					<p>Name: <span id='matchName'></span></p>
+					<img id='matchPhoto' src=''>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="formErrorModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Error!</h4>
+				</div>
+				<div class="modal-body">
+					<p>Form is incomplete. Please fill in a name, a valid URL, and answer all 10 quiz questions.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+	$(".submit").on("click", function() {
+
+		event.preventDefault();
+
+		var scores = [];
+		for (var i = 1; i<11; i++) {
+			var questionStr = "q" + i
+			//console.log(questionStr);
+			//console.log($('input[name="'+questionStr+'"]:checked').val());
+			if ($('input[name="'+questionStr+'"]:checked').val()) {
+				scores.push(Number($('input[name="'+questionStr+'"]:checked').val()) || 3);
+			}
+		}
+
+		var newPerson = {
+			name: $("#name").val().trim(),
+			photo: $("#photoLink").val().trim(),
+			scores: scores
+		}
+
+		//console.log(newPerson);
+
+		if(newPerson.name && newPerson.photo && newPerson.scores.length === 10) {
+			//console.log("Posting...");
+			$.post("/api/addFriend", newPerson,
+				function(data){
+					if (data) {
+					//console.log(data);
+					$("#matchModalButton").removeClass("hidden");
+					$("#matchName").text(data.name);
+					$("#matchPhoto").attr("src",data.photo);
+					$("#matchModal").modal();
+				}
+			});
+		} else {
+			$("#formErrorModal").modal();
+		}
+	})
+
+</script>
+</html>
